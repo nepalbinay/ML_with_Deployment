@@ -21,7 +21,7 @@ def page_layout():
     This web app helps in finding the appropriate city to move into based on the user preferences
     """)
 
-    image = Image.open(r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/City_Image_skyline.jpg")
+    image = Image.open(r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/City_Image_skyline.jpg?raw=True")
     st.image(image, use_column_width=True, height=50)
 
     with st.beta_expander(label="Want to know about the methodology? Expand this section.", expanded=False):
@@ -47,7 +47,7 @@ page_layout()
 
 #Importing the required Dataset
 def data_import():
-    url = r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/Millennial%20Cities%20Ranking%20by%20Indicator%20with%20coordinates.csv"
+    url = r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/Millennial%20Cities%20Ranking%20by%20Indicator%20with%20coordinates.csv?raw=True"
     df_orig = pd.read_csv(url)
     df = df_orig.drop(['Unnamed: 0','Overall Score'], axis = 1)
     column_names = df.columns[0:17]
