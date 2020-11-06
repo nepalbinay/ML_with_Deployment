@@ -21,7 +21,7 @@ def page_layout():
     This web app helps in finding the appropriate city to move into based on the user preferences
     """)
 
-    image = Image.open(r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/City_Image_skyline.jpg?raw=True")
+    image = Image.open(r"./CityTool/City_Image_skyline.jpg")
     st.image(image, use_column_width=True, height=50)
 
     with st.beta_expander(label="Want to know about the methodology? Expand this section.", expanded=False):
