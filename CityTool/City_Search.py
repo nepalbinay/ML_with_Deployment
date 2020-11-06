@@ -21,6 +21,7 @@ def page_layout():
     
     This web app helps in finding the appropriate city to move into based on the user preferences
     """)
+<<<<<<< HEAD
     city_image_url = r"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1113&h=450&q=80"
     image = Image.open(urllib.request.urlopen(city_image_url))
     st.image(image, use_column_width=True)
@@ -30,6 +31,9 @@ def page_layout():
 <<<<<<< HEAD
     with st.beta_expander(label="Information about calculation", expanded=False):
 =======
+=======
+
+>>>>>>> bbe6d7db93e10e175133d71da5f3665574377658
     image = Image.open(r"./CityTool/City_Image_skyline.jpg")
     st.image(image, use_column_width=True, height=50)
 
@@ -58,7 +62,10 @@ page_layout()
 #Importing the required Dataset
 def data_import():
 <<<<<<< HEAD
+<<<<<<< HEAD
     #url = r"C:\Users\nilaya\Desktop\ML Model Start to Deployment\CityTool\Millennial Cities Ranking by Indicator with coordinates.csv"
+=======
+>>>>>>> bbe6d7db93e10e175133d71da5f3665574377658
 =======
 >>>>>>> bbe6d7db93e10e175133d71da5f3665574377658
     url = r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/Millennial%20Cities%20Ranking%20by%20Indicator%20with%20coordinates.csv?raw=True"
