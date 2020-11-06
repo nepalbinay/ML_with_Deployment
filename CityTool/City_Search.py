@@ -27,7 +27,14 @@ def page_layout():
     st.markdown("""Photo by [Pedro Lastra](https://unsplash.com/@peterlaster?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
         on [Unsplash](https://unsplash.com/s/photos/city?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)""")
 
+<<<<<<< HEAD
     with st.beta_expander(label="Information about calculation", expanded=False):
+=======
+    image = Image.open(r"./CityTool/City_Image_skyline.jpg")
+    st.image(image, use_column_width=True, height=50)
+
+    with st.beta_expander(label="Want to know about the methodology? Expand this section.", expanded=False):
+>>>>>>> bbe6d7db93e10e175133d71da5f3665574377658
         st.markdown("""[Nestpick](https://www.nestpick.com/millennial-city-ranking-2018/) studied thousands of cities focusing on capitals,\
          economic and ex-pat hubs to determine \
          the top 100 millennial dream destinations. Following feedback about the importance of education to this generation,\
@@ -50,7 +57,10 @@ page_layout()
 
 #Importing the required Dataset
 def data_import():
+<<<<<<< HEAD
     #url = r"C:\Users\nilaya\Desktop\ML Model Start to Deployment\CityTool\Millennial Cities Ranking by Indicator with coordinates.csv"
+=======
+>>>>>>> bbe6d7db93e10e175133d71da5f3665574377658
     url = r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/Millennial%20Cities%20Ranking%20by%20Indicator%20with%20coordinates.csv?raw=True"
     df_orig = pd.read_csv(url)
     df = df_orig.drop(['Unnamed: 0','Overall Score'], axis = 1)
