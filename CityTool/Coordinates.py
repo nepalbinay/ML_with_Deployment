@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from opencage.geocoder import OpenCageGeocode
 
 #Importing the required Dataset
-df_orig = pd.read_excel(r"C:\Users\nilaya\Desktop\Millennial Cities Ranking by Indicator.xlsx", sheet_name='Sheet1')
+df_orig = pd.read_excel(path)
 col1_name = df_orig.columns[0]
 df_orig = df_orig.rename(columns={col1_name:'City','Apple Store':'University'}) #Changing the column names wherever required
 
