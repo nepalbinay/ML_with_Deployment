@@ -4,6 +4,7 @@ import numpy as np
 import streamlit as st
 import plotly.express as px
 from PIL import Image
+import urllib.request
 import matplotlib.pyplot as plt
 
 
@@ -20,11 +21,13 @@ def page_layout():
     
     This web app helps in finding the appropriate city to move into based on the user preferences
     """)
+    city_image_url = r"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1113&h=450&q=80"
+    image = Image.open(urllib.request.urlopen(city_image_url))
+    st.image(image, use_column_width=True)
+    st.markdown("""Photo by [Pedro Lastra](https://unsplash.com/@peterlaster?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+        on [Unsplash](https://unsplash.com/s/photos/city?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)""")
 
-    image = Image.open(r"C:\Users\nilaya\Desktop\ML Model Start to Deployment\CityTool\City_Image_skyline.jpg")
-    st.image(image, use_column_width=True, height=50)
-
-    with st.beta_expander(label="Want to know about the methodology? Expand this section.", expanded=False):
+    with st.beta_expander(label="Information about calculation", expanded=False):
         st.markdown("""[Nestpick](https://www.nestpick.com/millennial-city-ranking-2018/) studied thousands of cities focusing on capitals,\
          economic and ex-pat hubs to determine \
          the top 100 millennial dream destinations. Following feedback about the importance of education to this generation,\
@@ -47,7 +50,8 @@ page_layout()
 
 #Importing the required Dataset
 def data_import():
-    url = r"C:\Users\nilaya\Desktop\ML Model Start to Deployment\CityTool\Millennial Cities Ranking by Indicator with coordinates.csv"
+    #url = r"C:\Users\nilaya\Desktop\ML Model Start to Deployment\CityTool\Millennial Cities Ranking by Indicator with coordinates.csv"
+    url = r"https://github.com/nepalbinay/ML_with_Deployment/blob/master/CityTool/Millennial%20Cities%20Ranking%20by%20Indicator%20with%20coordinates.csv?raw=True"
     df_orig = pd.read_csv(url)
     df = df_orig.drop(['Unnamed: 0','Overall Score'], axis = 1)
     column_names = df.columns[0:17]
